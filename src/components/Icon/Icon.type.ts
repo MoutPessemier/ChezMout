@@ -11,6 +11,7 @@ export enum IconNames {
 	LinkedIn = 'linkedin',
 	Twitter = 'twitter',
 	YouTube = 'youtube',
+	ArrowRight = 'Arrow_right',
 }
 
 export enum IconSizes {

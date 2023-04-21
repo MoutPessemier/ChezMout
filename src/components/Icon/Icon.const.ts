@@ -8,6 +8,7 @@ import Profile from '@/assets/icons/Profile.svg';
 import Search from '@/assets/icons/Search.svg';
 import Send from '@/assets/icons/Send.svg';
 import Star from '@/assets/icons/Star.svg';
+import ArrowRight from '@/assets/icons/Arrow_right.svg';
 
 import { IconNames } from './Icon.type';
 
@@ -22,4 +23,5 @@ export const ICONS = {
 	[IconNames.Search]: Search,
 	[IconNames.Send]: Send,
 	[IconNames.Star]: Star,
+	[IconNames.ArrowRight]: ArrowRight,
 };
