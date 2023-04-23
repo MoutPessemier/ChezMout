@@ -1,6 +1,6 @@
 import { Indie_Flower } from 'next/font/google';
-import { Montserrat } from 'next/font/google'
-import { Sanchez } from 'next/font/google'
+import { Montserrat } from 'next/font/google';
+import { Sanchez } from 'next/font/google';
 
 export const colors = {
 	primary: '#0B7A5C',
