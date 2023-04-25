@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import TextField from "@/components/TextField/TextField.component";
 import Button from "@/components/Button/Button.component";
 
-
 interface RegisterValues {
 	firstName: string;
 	lastName: string;
