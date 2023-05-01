@@ -12,6 +12,8 @@ export enum IconNames {
 	Twitter = 'twitter',
 	YouTube = 'youtube',
 	ArrowRight = 'Arrow_right',
+	Menu = 'Menu',
+	Calendar = 'Calendar',
 }
 
 export enum IconSizes {

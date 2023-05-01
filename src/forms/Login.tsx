@@ -14,7 +14,7 @@ const LoginSchema = Yup.object().shape({
 	password: Yup.string().required('Required!')
 })
 
-const RegisterForm: FC = ({ ...props }) => {
+const Loginform: FC = () => {
 
 	const formik = useFormik({
 		initialValues: {
@@ -30,9 +30,10 @@ const RegisterForm: FC = ({ ...props }) => {
 	}
 
 	return <form onSubmit={formik.handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
-		<TextField label="Email" id="email" type="email" {...formik.getFieldProps('email')} />
+		<TextField autoFocus label="Email" id="email" type="email" {...formik.getFieldProps('email')} />
 		<TextField label="Password" id="password" type="password" {...formik.getFieldProps('password')} />
 		<Button text="Submit" />
 	</form>
 };
 
+export default Loginform;

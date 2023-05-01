@@ -8,6 +8,9 @@ export const StyledFooter = styled.footer`
 	color: ${(props) => props.theme.colors.white};
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	position: absolute;
+	bottom: 0;
+	min-height: 100px;
 `;
 
 export const SocialMediaLink = styled.a`
@@ -27,6 +30,9 @@ export const StyledLink = styled(Link)`
 	text-decoration: none;
 	text-align: right;
 	font-family: ${(props) => props.theme.fonts.montserrat.style.fontFamily};
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	&:hover {
 		color: ${(props) => props.theme.colors.secondary};
 		pointer: cursor;

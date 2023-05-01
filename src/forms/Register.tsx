@@ -20,7 +20,7 @@ const RegisterSchema = Yup.object().shape({
 	confirmPassword: Yup.string().required('Required!')
 })
 
-const RegisterForm: FC = ({ ...props }) => {
+const RegisterForm: FC = () => {
 
 	const formik = useFormik({
 		initialValues: {
@@ -39,7 +39,7 @@ const RegisterForm: FC = ({ ...props }) => {
 	}
 
 	return <form onSubmit={formik.handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
-		<TextField label="First Name" id="firstName" {...formik.getFieldProps('firstName')} />
+		<TextField autoFocus label="First Name" id="firstName" {...formik.getFieldProps('firstName')} />
 		<TextField label="Last Name" id="lastName" {...formik.getFieldProps('lastName')} />
 		<TextField label="Email" id="email" type="email" {...formik.getFieldProps('email')} />
 		<TextField label="Password" id="password" type="password" {...formik.getFieldProps('password')} />
@@ -48,3 +48,4 @@ const RegisterForm: FC = ({ ...props }) => {
 	</form>
 };
 
+export default RegisterForm;

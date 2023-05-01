@@ -9,6 +9,8 @@ import Search from '@/assets/icons/Search.svg';
 import Send from '@/assets/icons/Send.svg';
 import Star from '@/assets/icons/Star.svg';
 import ArrowRight from '@/assets/icons/Arrow_right.svg';
+import Menu from '@/assets/icons/Menu.svg';
+import Calendar from '@/assets/icons/Calendar.svg';
 
 import { IconNames } from './Icon.type';
 
@@ -24,4 +26,6 @@ export const ICONS = {
 	[IconNames.Send]: Send,
 	[IconNames.Star]: Star,
 	[IconNames.ArrowRight]: ArrowRight,
+	[IconNames.Menu]: Menu,
+	[IconNames.Calendar]: Calendar,
 };
