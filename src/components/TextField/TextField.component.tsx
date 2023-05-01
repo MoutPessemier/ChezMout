@@ -32,9 +32,11 @@ const TextField: FC<TextFieldProps> = ({ name, label, type = "text", placeholder
 		...props,
 	});
 
-	return <Container direction='row' alignItems='center' justifyContent='space-between' width="360">
-		<label htmlFor={name}>{label}{required ? <RequiredTag>*</RequiredTag> : undefined}</label>
-		<StyledInput aria-required={required} required={required} placeholder={placeholder} width={width} disabled={disabled} height={height} type={type} {...field} {...props} />
+	return <Container direction='column'>
+		<Container direction='row' alignItems='center' justifyContent='space-between' width="360px">
+			<label htmlFor={name}>{label}{required ? <RequiredTag>*</RequiredTag> : undefined}</label>
+			<StyledInput aria-required={required} required={required} placeholder={placeholder} width={width} disabled={disabled} height={height} type={type} {...field} {...props} />
+		</Container>
 		<ErrorMessage error={error}>{meta.error || '-'}</ErrorMessage>
 	</Container >
 };

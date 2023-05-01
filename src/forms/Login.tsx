@@ -1,8 +1,9 @@
-import { useFormik } from "formik";
+
 import { FC } from "react";
 import * as Yup from 'yup';
 import TextField from "@/components/TextField/TextField.component";
 import Button from "@/components/Button/Button.component";
+import { Form, Formik, FormikProps } from "formik";
 
 interface LoginValues {
 	email: string;
@@ -15,25 +16,22 @@ const LoginSchema = Yup.object().shape({
 })
 
 const Loginform: FC = () => {
-
-	const formik = useFormik({
-		initialValues: {
-			email: '',
-			password: ''
-		},
-		validationSchema: LoginSchema,
-		onSubmit: values => { onSubmitHandler(values) }
-	});
-
-	const onSubmitHandler = (values: LoginValues) => {
-		console.log(values);
-	}
-
-	return <form onSubmit={formik.handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
-		<TextField autoFocus label="Email" id="email" type="email" {...formik.getFieldProps('email')} />
-		<TextField label="Password" id="password" type="password" {...formik.getFieldProps('password')} />
-		<Button text="Submit" />
-	</form>
+	return (
+		<div>
+			<Formik initialValues={{
+				email: '',
+				password: ''
+			}} onSubmit={(values, actions) => { console.log(values, actions); }} validationSchema={LoginSchema}>
+				{(props: FormikProps<LoginValues>) => (
+					<Form>
+						<TextField autoFocus label="Email" id="email" type="email" name="email" />
+						<TextField label="Password" id="password" type="password" name="password" />
+						<Button text="Submit" style={{ float: 'right' }} />
+					</Form>
+				)}
+			</Formik>
+		</div>
+	)
 };
 
 export default Loginform;
