@@ -8,8 +8,6 @@ export const StyledFooter = styled.footer`
 	color: ${(props) => props.theme.colors.white};
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	position: absolute;
-	bottom: 0;
 	min-height: 100px;
 `;
 

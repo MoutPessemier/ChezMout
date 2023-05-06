@@ -32,6 +32,8 @@ export const StyledLink = styled(Link)`
 	color: ${(props) => props.theme.colors.white};
 	text-decoration: none;
 	margin-right: 0.5rem;
+	display: flex;
+	align-items: center;
 	&:hover {
 		color: ${(props) => props.theme.colors.secondary};
 	}

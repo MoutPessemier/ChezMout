@@ -23,3 +23,12 @@ export const RequiredTag = styled.span`
 	font-size: 12px;
 	vertical-align: text-top;
 `;
+
+export const GridContainer = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 230px);
+	grid-template-rows: repeat(auto-fill, 360px);
+	grid-row-gap: 10px;
+	justify-content: center;
+
+`;

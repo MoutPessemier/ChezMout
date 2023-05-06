@@ -7,6 +7,8 @@ import Button from '../Button/Button.component';
 import Modal from '../Modal/Modal.component';
 import { LogoDiv, ModalContainer, NameSpan, NavList, StyledLink } from './Header.style';
 import LoginTabs from '../Tabs/LoginTabs.component';
+import Icon from '../Icon/Icon.component';
+import { IconNames } from '../Icon/Icon.type';
 
 const Header: FC<HeaderProps> = ({ loggedIn }) => {
 	const [authModalOpen, setAuthModalOpen] = useState(false);
@@ -19,9 +21,9 @@ const Header: FC<HeaderProps> = ({ loggedIn }) => {
 				</LogoDiv>
 				<Container direction='row'>
 					<NavList>
-						<li><StyledLink href="/menu">Menu</StyledLink></li>
-						{loggedIn && <li><StyledLink href="/reserve">Reserve</StyledLink></li>}
-						{loggedIn && <li><StyledLink href="/ratings">Leave a rating</StyledLink></li>}
+						<li><StyledLink href="/menu"> <Icon name={IconNames.Menu} /> Menu</StyledLink></li>
+						{loggedIn && <li><StyledLink href="/reserve"><Icon name={IconNames.Calendar} /> Reserve</StyledLink></li>}
+						{loggedIn && <li><StyledLink href="/ratings"><Icon name={IconNames.Star} /> Leave a rating</StyledLink></li>}
 					</NavList>
 					{!loggedIn && <Button text='Log in' onClick={() => setAuthModalOpen(true)} size={SizeTypes.Medium} style={{ maxHeight: '45px', marginRight: '0.5em' }} />}
 					{loggedIn && <Button text='Log out' size={SizeTypes.Medium} style={{ maxHeight: '45px', marginRight: '0.5em' }} />}

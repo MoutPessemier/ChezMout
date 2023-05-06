@@ -12,5 +12,6 @@ This website is made as a project, learning the basics of `React` and `Next`, in
 - Firebase :
 	- Hosting
 	- Auth
+	- Database
 
 &copy; 2023 - Mout Pessemier
